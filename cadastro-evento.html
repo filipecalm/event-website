@@ -10,14 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/cadastro-evento.css">
+    <script src="./js/cadastro-evento.js" defer></script>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <aside class="d-flex flex-column flex-shrink-0 p-3 bg-light col-2">
+            <aside class="d-flex flex-column flex-shrink-0 p-3 col-2">
 
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap"></use>
                     </svg>
@@ -29,7 +31,7 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">
+                        <a href="./eventos.html" class="nav-link active" aria-current="page">
                             Eventos
                         </a>
                     </li>
@@ -45,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="nav-link link-dark">
+                        <a href="./index.html" class="nav-link link-dark">
                             Landing Page
                         </a>
                     </li>
@@ -63,25 +65,28 @@
                     <form class="col-6">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" aria-describedby="nome">
+                            <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite o nome do evento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="banner" class="form-label">Banner</label>
+                            <input type="text" class="form-control" id="banner" aria-describedby="banner" placeholder="Digite o link do banner do evento">
                         </div>
                         <div class="mb-3">
                             <label for="atracoes" class="form-label">Atrações</label>
-                            <input type="text" class="form-control" id="atracoes" aria-describedby="atracoes">
+                            <input type="text" class="form-control" id="atracoes" aria-describedby="atracoes" placeholder="Digite as atrações do evento">
                             <small>insira o nome dos artistas separados por vírgula</small>
                         </div>
                         <div class="mb-3">
                             <label for="descricao" class="form-label">Descrição</label>
-                            <textarea name="descricao" id="descricao" class="form-control" rows="5"></textarea>
+                            <textarea name="descricao" id="descricao" class="form-control" rows="5" placeholder="Escreva aqui a descrição do evento"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="data" class="form-label">Data</label>
-                            <input type="datetime" name="data" id="data" class="form-control"
-                                placeholder="00/00/00 00:00">
+                            <input type="datetime-local" name="data" id="data" class="form-control" placeholder="00/00/00 00:00">
                         </div>
                         <div class="mb-3">
                             <label for="lotacao" class="form-label">Lotação (número de ingressos disponiveis)</label>
-                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
+                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao" placeholder="Digite a capacidade máxima do evento">
                         </div>
                         <button type="submit" class="btn btn-primary">enviar</button>
                     </form>
@@ -89,8 +94,8 @@
             </main>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
 

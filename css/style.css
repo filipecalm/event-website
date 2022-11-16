@@ -1,50 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-body{
-    font-family: 'Questrial', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+body {
+  font-family: "Questrial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 .img-responsive {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 header {
-    position: relative;
-    box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
-    width: 100%;
-    background-color: #fff;
+  position: relative;
+  box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
+  width: 100%;
+  background-color: #fff;
 }
+
 aside {
-    min-height: 100vh;
+  min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #C2185B;
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #c2185b;
 }
 
-.btn-primary{
-    background-color: #C2185B;
-    border-color: #C2185B;
+.btn-primary {
+  background-color: #c2185b;
+  border-color: #c2185b;
+}
+
+.btn-dark:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+main {
+  width: 100%;
 }
 
 main.login {
-    width: 400px;
+  width: 400px;
 }
 
-section.full{
-    width: 100%;
-    min-height: 80vh;
-    padding: 50px 0;
+#eventos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.full {
+  width: 100%;
+  min-height: 80vh;
+  padding: 50px 0;
+}
+
+#section {
+  background-color: #f2f2f2; 
+  color: #555;
 }
 
 article.evento {
-    width: 350px;
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 350px;
+  height: 460px;
 }
 
-footer nav ul{
-    list-style: none;
-    display: flex;
+article.evento p {
+  overflow: hidden;
+  min-height: 72px;
 }
 
-footer nav ul li  {
-    padding: 10px;
+header {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+}
+
+footer nav ul li {
+  padding: 10px;
 }

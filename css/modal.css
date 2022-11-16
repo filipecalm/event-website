@@ -1,0 +1,41 @@
+#modal {
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  width: 550px;
+  border: 4px solid #c2185b;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+#btn-close {
+  width: 150px;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-control {
+  margin: 20px;
+  width: 500px;
+}
+
+#ticket {
+  width: 100px;
+}
+
+.modal-button {
+  margin: 0px 5px;
+}
+
+.modal-button:hover {
+  background-color: rgb(71, 85, 207);
+}
+
