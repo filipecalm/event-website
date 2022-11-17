@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
 body {
   font-family: "Questrial", sans-serif;
   display: flex;
@@ -65,16 +66,16 @@ section.full {
 }
 
 #section {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
   color: #555;
 }
 
 article.evento {
-  display:-webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   width: 350px;
-  height: 460px;
+  height: 500px;
 }
 
 article.evento p {
@@ -84,6 +85,24 @@ article.evento p {
 
 header {
   width: 100%;
+}
+
+#title-atractions {
+  z-index: 1;
+  position: absolute;
+  top: 170px;
+}
+
+#description-event {
+  position: absolute;
+  top: 250px;
+  z-index: 1
+}
+
+#btn-book {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
 }
 
 footer {
@@ -97,4 +116,247 @@ footer nav ul {
 
 footer nav ul li {
   padding: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .row aside {
+    width: 100%;
+    margin-bottom: -200px;
+    text-align: center;
+  }
+
+  aside {
+    background-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+
+  .container-fluid,
+  .row {
+    max-width: 865px;
+  }
+
+  .evento .card .p-5 .m-3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  p {
+    max-width: 680px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  a {
+    max-width: 680px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  #reservas {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 828px) {
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    max-width: 828px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  figure {
+    max-width: 828px;
+    align-content: center;
+  }
+
+  .my-5 {
+    width: 900px;
+  }
+
+  main {
+    align-content: center;
+    width: 100vw;
+  }
+
+  .row aside img {
+    width: 150px;
+  }
+
+  .nav {
+    align-content: center;
+  }
+
+  main {
+    align-content: center;
+    position: absolute;
+    top: 400px;
+  }
+
+  .btn {
+    width: 160px;
+  }
+
+  .btn-danger {
+    width: 70px;
+  }
+
+  .row aside ul {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-dark {
+    width: 80px;
+  }
+
+  a {
+    max-width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  #form-evento input {
+    width: 280px;
+  }
+
+  #form-evento textarea {
+    width: 280px;
+  }
+
+  #form-evento label {
+    width: 180px;
+  }
+
+  .my-5 {
+    width: 500px;
+  }
+
+  .btn {
+    width: 160px;
+    flex-direction: row;
+  }
+
+  .btn-danger {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .btn-dark {
+    width: 80px;
+  }
+
+  a {
+    max-width: 900px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .container-fluid,
+  .row {
+    max-width: 540px;
+  }
+
+  .evento .card .p-5 .m-3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  p {
+    max-width: 540px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  a {
+    max-width: 540px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  #main {
+    max-width: 540px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  #reservas {
+    margin-top: 130px;
+  }
+
+  .table-h1 {
+    width: 170px;
+  }
+
+  .table-h2 {
+    width: 90px;
+  }
+  
+  .table {
+    width: 300%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  tbody {
+    width: 700px;
+  }
+
+  #delete {
+    width: 280px;
+  }
+
+  .btn {
+    width: 80px;
+  }
+
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .td-01 {
+    width: 30px;
+    padding-left: 20px;
+  }
+
+  .td-btn {
+    width: 40px;
+  }
+
+  .btn-primary {
+    width: 200px;
+  }
+
+  .btn-danger {
+    margin-left: 50px;
+    width: 70px;
+  }
+
+  #list-all {
+    width: 200px;
+  }
 }
