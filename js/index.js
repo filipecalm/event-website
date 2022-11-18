@@ -12,6 +12,10 @@ const email = document.querySelector("#email")
 const form = document.querySelector("#form")
 const nome = document.querySelector("#name")
 
+ticket.setAttribute("required","required")
+email.setAttribute("required","required")
+nome.setAttribute("required","required")
+
 const dataCorreta = (date) => {
   let data = date.split("")
   let data_Correta =
