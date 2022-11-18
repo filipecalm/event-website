@@ -14,7 +14,7 @@
 
 <div style="display: inline_block">
   <a href="https://filipecalm.github.io/desafio-sites-dinamicos-xp46-gp02/">
-    <img align="center" alt="github" src="(https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+    <img align="center" alt="github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </div>
 
