@@ -45,7 +45,7 @@ form.onsubmit = async (evento) => {
     alert("Evento excluído com sucesso!")
     window.location.href =
       window.location.pathname == "./excluir-evento.html"
-        ? `${window.location.origin}./admin.html`
-        : `${window.location.origin}./admin.html`
+        ? `${window.location.origin}/admin.html`
+        : `${window.location.origin}/admin.html`
   }
 }
