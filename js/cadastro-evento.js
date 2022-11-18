@@ -40,7 +40,7 @@ form.onsubmit = async (evento) => {
 
   if (response.status == 201) {
     alert("Evento cadastrado com sucesso!")
-    window.location.href = "filipecalm.github.io/desafio-sites-dinamicos-xp46-gp02/desafio-sites-dinamicos-xp46-gp02/blob/main/admin.html"
+    window.location.href = "filipecalm.github.io/desafio-sites-dinamicos-xp46-gp02/admin.html"
 
     eventNome.value = ""
     eventBanner.value = ""
