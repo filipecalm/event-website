@@ -15,10 +15,6 @@ const table = document.querySelector("tbody")
 const form = document.querySelector("#form")
 const nome = document.querySelector("#name")
 
-ticket.setAttribute("required","required")
-email.setAttribute("required","required")
-nome.setAttribute("required","required")
-
 const id = new URLSearchParams(window.location.search).get("id")
 
 async function listaReservas() {
@@ -83,7 +79,11 @@ async function openModal(_id) {
     redirect: "follow",
     headers: { "Content-Type": "application/json" },
   })
-
+  
+  ticket.setAttribute("required","required")
+  email.setAttribute("required","required")
+  nome.setAttribute("required","required")
+  
   const contentResponse = await response.json()
   headingModal.innerHTML = `Reserve seu ingresso para ${contentResponse.name}`
   tickets.innerHTML = `Tickets disponíveis: (${contentResponse.number_tickets})`
