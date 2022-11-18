@@ -12,6 +12,10 @@ const email = document.querySelector("#email")
 const form = document.querySelector("#form")
 const nome = document.querySelector("#name")
 
+ticket.setAttribute("required","required")
+email.setAttribute("required","required")
+nome.setAttribute("required","required")
+
 const dataCorreta = (date) => {
   let data = date.split("")
   let data_Correta =
@@ -24,7 +28,7 @@ const dataCorreta = (date) => {
 }
 
 async function openModal(id) {
-  modal.setAttribute("style", "display:flex");
+  modal.setAttribute("style", "display:flex")
   eventId.value = id
   const response = await fetch(`${URL_API}/events/${id}`, {
     method: "GET",
@@ -36,8 +40,10 @@ async function openModal(id) {
   headingModal.innerHTML = `Reserve seu ingresso para ${contentResponse.name}`
   tickets.innerHTML = `Tickets disponíveis: (${contentResponse.number_tickets})`
   ticket.max = contentResponse.number_tickets
-
+  
 }
+
+console.log(ticket.max)
 
 function closeModal() {
   modal.setAttribute("style", "display:none")
@@ -45,6 +51,10 @@ function closeModal() {
   email.value = ""
   ticket.value = ""
   eventId.value = ""
+}
+
+btn_close.onclick = () => {
+  closeModal()
 }
 
 async function listEvents() {
@@ -56,9 +66,9 @@ async function listEvents() {
   console.log(response)
 
   const contentResponse = await response.json()
-  const eventAttractions = contentResponse.slice(0, 3)
-  eventAttractions.forEach((item) => {
-    evento.innerHTML += `<article class="evento card p-5 m-3">
+  const eventAttraction = contentResponse.slice(0, 12)
+  eventAttraction.forEach((item) => {
+    evento.innerHTML += ` <article class="evento card p-5 m-3">
     <h2>${item.name} - ${dataCorreta(item.scheduled)}</h2>
     <h4 id="title-attractions">${item.attractions}</h4>
     <p id="description-event">${item.description}</p>

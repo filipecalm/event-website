@@ -66,21 +66,20 @@
             <div id="modal">
                 <div class="modal-header">
                     <h5 id="heading-modal" class="modal-title">Reserve seu ingresso para </h5>
-                    <button id="btn-exit" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="form">
-                    <label for="name">Nome</label>
-                    <input type="text" class="form-control" id="name">
+                    <label class="modal-label" for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" placeholder="Digite seu nome aqui">
 
-                    <label for="email"> E-mail</label>
-                    <input type="email" class="form-control" id="email">
+                    <label class="modal-label" for="email"> E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="seunome@email.com">
 
-                    <label id="tickets" for="ticket">Tickets restantes: </label>
+                    <label class="modal-label" id="tickets" for="ticket">Tickets disponíveis: </label>
                     <input type="number" class="form-control" value=1 min="1" max="999" id="ticket">
 
                     <input type="hidden" name="id" id="eventId">
-                    <button type="button" id="btn-close" class="btn btn-secondary modal-button ">Fechar</button>
-                    <button type="submit" class="btn btn-primary modal-button ">Reservar ingresso</button>
+                    <button type="button" id="btn-close">X</button>
+                    <button id="btn-submit" type="submit" class="btn btn-primary modal-button ">Reservar ingresso</button>
 
                 </form>
             </div>
@@ -107,8 +106,8 @@
 
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
 

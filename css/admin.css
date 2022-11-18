@@ -1,0 +1,47 @@
+@media screen and (max-width: 1276px) {
+  main {
+    text-align: center;
+    margin: auto;
+  }
+
+  td {
+    width: 120px;
+  }
+
+  a .btn .btn-dark {
+    width: 12px;
+  }
+
+  main div form {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  main div form input {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 941px) {
+  .btn-danger,
+  .btn-dark {
+    width: 150px;
+  }
+
+  #th-actions {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .btn-danger,
+  .btn-dark {
+    width: 160px;
+  }
+
+  #th-actions {
+    width: 250px;
+  }
+}

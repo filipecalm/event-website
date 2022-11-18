@@ -28,7 +28,7 @@
 }
 
 .slide {
-  width: 30%;
+  width: 100%;
   position: relative;
   transition: 2s;
   background-size: cover;
@@ -60,23 +60,23 @@
 }
 
 #radio1:checked ~ .first {
-  margin-left: 0;
+  margin-left: 0%;
 }
 
 #radio2:checked ~ .first {
-  margin-left: -25%;
+  margin-left: -100%;
 }
 
 #radio3:checked ~ .first {
-  margin-left: -60%;
+  margin-left: -200%;
 }
 
 #radio4:checked ~ .first {
-  margin-left: -90%;
+  margin-left: -300%;
 }
 
 #radio5:checked ~ .first {
-  margin-left: -120%;
+  margin-left: -400%;
 }
 
 #radio1:checked ~ .first {

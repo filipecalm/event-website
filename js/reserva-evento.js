@@ -3,14 +3,63 @@ const URL_API = "https://xp41-soundgarden-api.herokuapp.com"
 const headingModal = document.querySelector("#heading-modal")
 const btn_submit = document.querySelector("#btn-submit")
 const btn_close = document.querySelector("#btn-close")
+const heading = document.querySelector("#reservas")
 const tickets = document.querySelector("#tickets")
 const eventId = document.querySelector("#eventId")
 const evento = document.querySelector("#eventos")
 const ticket = document.querySelector("#ticket")
-const modal = document.querySelector("#modal")
+const btn = document.querySelector("#btn-book")
 const email = document.querySelector("#email")
+const modal = document.querySelector("#modal")
+const table = document.querySelector("tbody")
 const form = document.querySelector("#form")
 const nome = document.querySelector("#name")
+
+
+const id = new URLSearchParams(window.location.search).get("id")
+
+async function listaReservas() {
+  const response = await fetch(`${URL_API}/bookings/event/${id}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    redirect: "follow",
+  })
+
+  const contentResponse = await response.json()
+  heading.innerHTML = contentResponse[0].event.name
+
+  
+  contentResponse.forEach((item) => {
+    table.innerHTML += `<tr>
+    <th scope="row">${contentResponse.indexOf(item) + 1}</th>
+    <td>${item.owner_name}</td>
+    <td>${item.owner_email}</td>
+    <td class="td-01">${item.number_tickets}</td>
+    <td class="td-btn">
+    <button class="btn btn-danger" 
+    onclick="deletaReserva('${item._id}')">excluir
+    </button>
+    </td>
+    </tr>`
+
+  })
+}
+
+listaReservas()
+
+async function deletaReserva(id) {
+  const response = await fetch(`${URL_API}/bookings/${id}`, {
+    method: "DELETE",
+    redirect: "follow",
+    headers: { "Content-Type": "application/json" },
+  })
+  if (response.status == 204) {
+    alert("Reserva excluída com sucesso!")
+  }
+  window.location.reload()
+}
+
+// MODAL
 
 const dataCorreta = (date) => {
   let data = date.split("")
@@ -23,8 +72,8 @@ const dataCorreta = (date) => {
   return data_Correta
 }
 
-async function openModal(id) {
-  modal.setAttribute("style", "display:flex");
+async function openModal(_id) {
+  modal.setAttribute("style", "display:flex")
   eventId.value = id
   const response = await fetch(`${URL_API}/events/${id}`, {
     method: "GET",
@@ -36,7 +85,7 @@ async function openModal(id) {
   headingModal.innerHTML = `Reserve seu ingresso para ${contentResponse.name}`
   tickets.innerHTML = `Tickets disponíveis: (${contentResponse.number_tickets})`
   ticket.max = contentResponse.number_tickets
-
+  
 }
 
 function closeModal() {
@@ -47,36 +96,13 @@ function closeModal() {
   eventId.value = ""
 }
 
-async function listEvents() {
-  const response = await fetch(`${URL_API}/events`, {
-    method: "GET",
-    redirect: "follow",
-    headers: { "Content-Type": "application/json" },
-  })
-  console.log(response)
-
-  const contentResponse = await response.json()
-  const eventAttractions = contentResponse.slice(0, 3)
-  eventAttractions.forEach((item) => {
-    evento.innerHTML += `<article class="evento card p-5 m-3">
-    <h2>${item.name} - ${dataCorreta(item.scheduled)}</h2>
-    <h4 id="title-attractions">${item.attractions}</h4>
-    <p id="description-event">${item.description}</p>
-    <button id="btn-book" class="btn btn-primary" onclick="openModal('${
-      item._id
-    }')" >reservar ingresso</button>
-    </article>`
-  })
-}
-
-listEvents()
-
 btn_close.onclick = () => {
   closeModal()
 }
 
 form.onsubmit = async (evento) => {
   evento.preventDefault()
+  console.log(evento)
 
   const reservarTicket = {
     owner_name: nome.value,
@@ -101,4 +127,5 @@ form.onsubmit = async (evento) => {
 
     closeModal()
   }
+  window.location.reload()
 }
