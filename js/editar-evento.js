@@ -58,7 +58,7 @@ form.onsubmit = async (evento) => {
   const response = await fetch(`${URL_API}/events/${id}`, requestOptions)
   if (response.status == 200) {
     alert("Evento editado com sucesso!")
-    window.location.href = "../admin.html"
+    window.location.href = "./admin.html"
     
     eventNome.value = ""
     eventBanner.value = ""
