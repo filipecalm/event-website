@@ -25,7 +25,7 @@
     📚 Colocar em prática os conhecimentos de Javascript e HTML criando um site com conteúdo dinâmico e consumo de API.<br>
     📚 Consumir dados de API com Javascript.<br>
     📚 Navegar pelo DOM com Javascript.<br>
-    📚 Exibir conteúdos dinâmicos nas páginas do site.
+    📚 Exibir conteúdos dinâmicos nas páginas do site.<br>
     📚 Enviar dados para API.
   </em>
 </p>
