@@ -31,9 +31,6 @@
   background-color: #555;
   color: #fff;
   align-items: center;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
   border: 1px solid transparent;
   border-radius: .25rem;
 }
@@ -83,16 +80,28 @@
 
 @media screen and (max-width: 540px) {
   #modal {
-    width: 300px;
+    width: 350px;
+    height: 420px;
+
+  }
+
+  #form, #modal {
+    margin-left: 40px;
+  } 
+
+  #heading-modal {
+    display: none
   }
 
   .form-control {
     width: 200px;
   }
-  
-  #btn-close {
-    margin-bottom: 10px;
-    width: 200px;
-  }
 
+  #btn-close {
+    position: absolute;
+    top: -45px;
+    right: 160px;
+    display: flex;
+
+  }
 }
