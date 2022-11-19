@@ -78,11 +78,10 @@
   background-color: rgb(71, 85, 207);
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 540px) and (orientation: portrait) {
   #modal {
     width: 350px;
     height: 420px;
-
   }
 
   #form, #modal {
