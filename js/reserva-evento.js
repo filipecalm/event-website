@@ -27,7 +27,6 @@ async function listaReservas() {
   const contentResponse = await response.json()
   heading.innerHTML = contentResponse[0].event.name
 
-  
   contentResponse.forEach((item) => {
     table.innerHTML += `<tr>
     <th scope="row">${contentResponse.indexOf(item) + 1}</th>
@@ -105,7 +104,6 @@ btn_close.onclick = () => {
 
 form.onsubmit = async (evento) => {
   evento.preventDefault()
-  console.log(evento)
 
   const reservarTicket = {
     owner_name: nome.value,
@@ -123,7 +121,6 @@ form.onsubmit = async (evento) => {
 
   const response = await fetch(`${URL_API}/bookings`, requestOptions)
   const contentResponse = await response.json()
-  console.log(contentResponse)
 
   if (response.status == 201) {
     alert("Reserva feita com sucesso!")
