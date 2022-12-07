@@ -7,7 +7,6 @@ async function listEvents() {
     redirect: "follow",
     headers: { "Content-Type": "application/json" },
   })
-  console.log(response)
 
   const dataCorreta = (date) => {
     let data = date.split("")
