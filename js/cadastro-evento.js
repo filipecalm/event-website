@@ -36,7 +36,6 @@ form.onsubmit = async (evento) => {
 
   const response = await fetch(`${URL_API}/events`, requestOptions)
   const contentResponse = await response.json()
-  console.log(contentResponse)
 
   if (response.status == 201) {
     alert("Evento cadastrado com sucesso!")
