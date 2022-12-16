@@ -1,6 +1,6 @@
 <h1> Sites Dinâmicos - Sound Garden</h1>
 
-### 👋 Desafio:
+### ✅ Desafio:
 <p>
   <em>
     Uma casa de show chamada Sound Garden será
@@ -10,7 +10,7 @@
   </em>
 </p>
 
-### 👋 Github pages:
+### ✅ Github pages:
 
 <div style="display: inline_block">
   <a href="https://filipecalm.github.io/desafio-sites-dinamicos-xp46-gp02/">
@@ -19,7 +19,7 @@
 </div>
 
 
-### 👋 Objetivo de aprendizagem:
+### ✅ Objetivo de aprendizagem:
 <p>
   <em>
     📚 Colocar em prática os conhecimentos de Javascript e HTML criando um site com conteúdo dinâmico e consumo de API.<br>
@@ -30,7 +30,7 @@
   </em>
 </p>
 
-### 👋 Funcionalidades:
+### ✅ Funcionalidades:
 <p>
   <em>
     <li> Listar eventos<br>
